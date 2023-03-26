@@ -2,6 +2,8 @@
 package QLKho;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class danhSachDienThoai{
     private ArrayList<dienThoai> danhSach;
@@ -9,7 +11,6 @@ public class danhSachDienThoai{
     public danhSachDienThoai(ArrayList<dienThoai> danhSach) {
         this.danhSach = danhSach;
     }
-
     public danhSachDienThoai() {
         this.danhSach = new ArrayList<dienThoai>();
     }
@@ -35,5 +36,21 @@ public class danhSachDienThoai{
     }
     public boolean xoaDT(dienThoai dt){
         return this.danhSach.remove(dt);
+    }
+    public void sxDT(){
+        Collections.sort(this.danhSach, new Comparator<dienThoai>(){
+            @Override
+            public int compare(dienThoai dt1, dienThoai dt2){
+                if(dt1.getGiaDT()<dt2.getGiaDT()){
+                    return 1;
+                }
+                else if(dt1.getGiaDT() > dt2.getGiaDT()){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            }
+        });
     }
 }

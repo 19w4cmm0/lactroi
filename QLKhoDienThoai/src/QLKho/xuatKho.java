@@ -12,8 +12,8 @@ public class xuatKho extends dienThoai{
     }
    
    xuatKho(){}
-   xuatKho(String tenDT, String hangDT, int namSX, int iD, int soLuong, int soLuongXuat ,String ngayXuat){
-       super(tenDT, hangDT, namSX, iD, soLuong);
+   xuatKho(String tenDT, String hangDT, int namSX, int iD, int soLuong, int giaDT ,int soLuongXuat ,String ngayXuat){
+       super(tenDT, hangDT, namSX, iD, soLuong, giaDT);
        this.soLuongXuat=soLuongXuat;
        this.ngayXuat=ngayXuat;
    }

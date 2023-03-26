@@ -9,19 +9,20 @@ public class dienThoai {
     private int namSX;
     private int iD;
     private int soLuong;
-
+    private int giaDT;
     public dienThoai(int iD) {
         this.iD = iD;
     }
    
    dienThoai(){}
-   dienThoai(String tenDT, String hangDT, int namSX, int iD, int soLuong){
+   dienThoai(String tenDT, String hangDT, int namSX, int iD, int soLuong, int giaDT){
        super();
        this.hangDT=hangDT;
        this.namSX=namSX;
        this.tenDT=tenDT;
        this.iD=iD;
        this.soLuong=soLuong;
+       this.giaDT=giaDT;
        
    }
 
@@ -65,9 +66,17 @@ public class dienThoai {
         this.soLuong = soLuong;
     }
 
+    public int getGiaDT() {
+        return giaDT;
+    }
+
+    public void setGiaDT(int giaDT) {
+        this.giaDT = giaDT;
+    }
+
     @Override
     public String toString() {
-        return "dienThoai{" + "tenDT=" + tenDT + ", hangDT=" + hangDT + ", namSX=" + namSX + ", iD=" + iD + ", soLuong=" + soLuong + '}';
+        return "dienThoai{" + "tenDT=" + tenDT + ", hangDT=" + hangDT + ", namSX=" + namSX + ", iD=" + iD + ", soLuong=" + soLuong + ", giaDT=" + giaDT + '}';
     }
     
     
