@@ -9,7 +9,7 @@ public class NewClass {
         danhSachNhapKho dsnk = new danhSachNhapKho();
         danhSachXuatKho dsxk = new danhSachXuatKho();
         Scanner sc = new Scanner(System.in);
-        boolean luachon=true;
+        int chon;
         do{
         System.out.println("#1.Danh sach dien thoai");
         System.out.println("#2.Search dien thoai");
@@ -20,9 +20,9 @@ public class NewClass {
         System.out.println("#7.Kiem tra dien thoai co ton tai trong kho hay khong");
         System.out.println("#8.Sap xep dien thoai theo gia");
         System.out.println("Chon chuc nang");
-        System.out.println("+--------------------------------+");
+        System.out.println("----Nhan phim 0 de thoat khoi chuong trinh, xin cam on!----");
         
-        int chon = sc.nextInt();
+        chon = sc.nextInt();
         sc.nextLine();
         switch(chon){
             
@@ -118,10 +118,10 @@ public class NewClass {
             }
             default -> System.exit(0);              
         }      
-    }while(luachon);
+    }while(chon!=0);
     }
     public static void main(String[] args) {
-        System.out.println("+----------------------------------+");
+        System.out.println("----CHUONG TRINH QUAN LY KHO DIEN THOAI CAO CAP----");
         menu();
     }
 }
